@@ -473,6 +473,11 @@ file = "kubejs/startup_scripts/tools.js"
 hash = "c5ab5733a790a3b356943001f9fa3b5eca0e89c73b6ff43fa070bb8fccbf080c"
 
 [[files]]
+file = "mods/ambientsounds.pw.toml"
+hash = "e3714f163dd8d1751d186221ad0049dc5719a2d6537ddfbc4e3403f769cffe2c"
+metafile = true
+
+[[files]]
 file = "mods/anti-smooth.pw.toml"
 hash = "6c088ceea7e555d1cf4a0f2e5a1d757125c2651ffa74f7542fb7c0e4cf75972d"
 metafile = true
@@ -525,6 +530,11 @@ metafile = true
 [[files]]
 file = "mods/coroutil.pw.toml"
 hash = "429284603e4c5ca44777cb4ce2455477fcc1eee4dc9a4ae2f759c4895bf332e7"
+metafile = true
+
+[[files]]
+file = "mods/creativecore.pw.toml"
+hash = "e1d3ff09f3124154bf3cdd83783ea672aee7bdb6edda076574303a6bc2d4b512"
 metafile = true
 
 [[files]]

@@ -1,6 +1,6 @@
 name = "YUNG's Better Caves"
 filename = "YungsBetterCaves-1.20.1-Fabric-2.0.5.jar"
-side = "server"
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/Dfu00ggU/versions/bsjRT669/YungsBetterCaves-1.20.1-Fabric-2.0.5.jar"

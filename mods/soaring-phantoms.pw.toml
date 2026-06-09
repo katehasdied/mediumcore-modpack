@@ -1,6 +1,6 @@
 name = "Soaring Phantoms"
 filename = "soaring-phantoms-1.0.0+1.20.jar"
-side = "server"
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/d4Rp6J8P/versions/Bs9taRUt/soaring-phantoms-1.0.0%2B1.20.jar"

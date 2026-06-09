@@ -1,6 +1,6 @@
 name = "Naturally Trimmed"
 filename = "naturally_trimmed-3.2.1+1.20.1-fabric.jar"
-side = "server"
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/hHVaPgFK/versions/xD1mzl0O/naturally_trimmed-3.2.1%2B1.20.1-fabric.jar"
