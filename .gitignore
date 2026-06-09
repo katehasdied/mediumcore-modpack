@@ -1,8 +1,17 @@
-*
+/**
+
 !.gitignore
 
+# Whitelist both the folder and its contents
+!kubejs/
 !kubejs/**
+
+!config/
 !config/**
+
+!links/
 !links/**
+
+# Whitelisted files
 !index.toml
 !pack.toml
