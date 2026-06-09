@@ -1,0 +1,13 @@
+name = "No Tree Punching"
+filename = "notreepunching-fabric-1.20-7.1.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/2W2FL5UY/versions/POWV0EfQ/notreepunching-fabric-1.20-7.1.0.jar"
+hash-format = "sha512"
+hash = "c6b289b29e78a5402b7202f02d094c03c7a3491f5e075dcf226ab14d4785eb44e38dee926b3bf4aa9a7f7dd935995f1bba5046e67527a6bc68148895548bbb1f"
+
+[update]
+[update.modrinth]
+mod-id = "2W2FL5UY"
+version = "POWV0EfQ"
