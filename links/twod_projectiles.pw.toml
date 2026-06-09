@@ -1,0 +1,13 @@
+name = "2D Projectiles ➵"
+filename = "twod_projectiles-fabric-1.1.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/W2K5WNdH/versions/zaPXpkzj/twod_projectiles-fabric-1.1.1.jar"
+hash-format = "sha512"
+hash = "8639bbf7d818a95e64cce456eeeeff1339d738776702540f55a89d3cabeeaca5dfddd6e71f1842842b640db116fbf7b77c7616cf9eff16c0eb7a37e128b05b2f"
+
+[update]
+[update.modrinth]
+mod-id = "W2K5WNdH"
+version = "zaPXpkzj"

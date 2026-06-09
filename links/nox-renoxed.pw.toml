@@ -1,0 +1,13 @@
+name = "Nox: Renoxed"
+filename = "nox-2.6.2+1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/zJMkwiX4/versions/T5YUFv2l/nox-2.6.2%2B1.20.1.jar"
+hash-format = "sha512"
+hash = "ecde68cf60cfb73279a07e8bcfb0fe76d0a2070a1c9cf62eac30238168f5eb2edccaca5eafc075b826b8c86cd0d0464fe514808f952bf22f70cb68310e9f2491"
+
+[update]
+[update.modrinth]
+mod-id = "zJMkwiX4"
+version = "T5YUFv2l"

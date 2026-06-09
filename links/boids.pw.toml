@@ -1,0 +1,13 @@
+name = "Boids"
+filename = "Boids-2.0.3+1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/2OckSy74/versions/MewtMK1Z/Boids-2.0.3%2B1.20.1.jar"
+hash-format = "sha512"
+hash = "00face5473d2986588401715d4cd48ab7d62eecd1050a0d08d6338bfeaf35239c2164f2a04591f65cf56c38138431151222543e87ba2fe90430c1331e19774aa"
+
+[update]
+[update.modrinth]
+mod-id = "2OckSy74"
+version = "MewtMK1Z"

@@ -1,0 +1,13 @@
+name = "Basic Shields"
+filename = "BasicShields-1.4.1-1.20.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/ePPW8VRb/versions/fk6BV41B/BasicShields-1.4.1-1.20.2.jar"
+hash-format = "sha512"
+hash = "c5c1c59e4f32b82055308f1a298926d71fd5c3cb31b578378cad7d4d0250435290a46ec609212d6a5ea2b5bb89fc4950c19dc4d537224c805c77c9ca652990fa"
+
+[update]
+[update.modrinth]
+mod-id = "ePPW8VRb"
+version = "fk6BV41B"

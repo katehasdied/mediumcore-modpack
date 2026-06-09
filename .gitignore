@@ -1,8 +1,8 @@
 *
 !.gitignore
 
-!kubejs/
-!config/
+!kubejs/**
+!config/**
+!links/**
 !index.toml
 !pack.toml
-!links/

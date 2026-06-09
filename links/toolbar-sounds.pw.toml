@@ -1,0 +1,13 @@
+name = "Toolbar Sounds"
+filename = "toolbar-sounds-1.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/CsOiS4nS/versions/e6Edt62k/toolbar-sounds-1.1.jar"
+hash-format = "sha512"
+hash = "5c7590515a5dec02a0e7a8985d898d90dfbad9d1ba8e046fd45796e173aef369f2b72152c974d1ea0032b3044370ab7dea4e05b289751ca64aec7d3d481c0837"
+
+[update]
+[update.modrinth]
+mod-id = "CsOiS4nS"
+version = "e6Edt62k"
