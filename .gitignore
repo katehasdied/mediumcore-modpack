@@ -1,1 +1,7 @@
-kubejs/probe/
+*
+!.gitignore
+!links/
+!kubejs/
+!config/
+!index.toml
+!pack.toml
