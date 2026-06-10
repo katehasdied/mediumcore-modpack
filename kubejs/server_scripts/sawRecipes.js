@@ -13,6 +13,25 @@ ServerEvents.recipes(event => {
         "warped"
     ]
 
+    const colors = [
+        "white",
+        "gray",
+        "orange",
+        "magenta",
+        "purple",
+        "light_blue",
+        "yellow",
+        "lime",
+        "pink",
+        "light_gray",
+        "cyan",
+        "blue",
+        "brown",
+        "green",
+        "red",
+        "black"
+    ]
+
     function shapedSawRecipe(item, pattern, key) {
         let sawKey = key;
         sawKey.X = "#notreepunching:saws";
@@ -210,4 +229,73 @@ ServerEvents.recipes(event => {
             I: "minecraft:iron_ingot"
         }
     )
+
+    shapedSawRecipe(
+        "minecraft:barrel",
+        [
+            "PSP",
+            "IXI",
+            "PSP"
+        ],
+        {
+            P: "#minecraft:planks",
+            I: "minecraft:iron_ingot",
+            S: "#minecraft:wooden_slabs"
+        }
+    )
+
+    shapedSawRecipe(
+        "minecraft:smithing_table",
+        [
+            "IIX",
+            "PP ",
+            "PP "
+        ],
+        {
+            P: "#minecraft:planks",
+            I: "minecraft:iron_ingot",
+        }
+    )
+
+    shapedSawRecipe(
+        "minecraft:fletching_table",
+        [
+            "FFX",
+            "PP ",
+            "PP "
+        ],
+        {
+            P: "#minecraft:planks",
+            F: "minecraft:feather",
+        }
+    )
+
+     shapedSawRecipe(
+        "minecraft:cartography_table",
+        [
+            "BBX",
+            "PP ",
+            "PP "
+        ],
+        {
+            P: "#minecraft:planks",
+            B: "minecraft:paper",
+        }
+    )
+    
+    colors.forEach(color => {
+        shapedSawRecipe(
+            Item.of(`minecraft:${color}_bed`,1),
+            [
+                "WWW",
+                "PPP",
+                "FXF"
+            ],
+            {
+                P: "#minecraft:planks",
+                W: `minecraft:${color}_wool`,
+                F: "#minecraft:wooden_fences"
+            }
+        )
+    })
 })

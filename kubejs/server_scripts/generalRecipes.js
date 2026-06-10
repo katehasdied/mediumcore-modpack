@@ -6,7 +6,8 @@ ServerEvents.recipes(event => {
         "minecraft:gold_ingot",
         "minecraft:copper_ingot",
         "minecraft:string",
-        "minecraft:torch"
+        "minecraft:torch",
+        "minecraft:bookshelf"
     ].forEach((item) => {
         event.remove({
             output: item
@@ -121,6 +122,20 @@ ServerEvents.recipes(event => {
         ]
     )
     })
+
+    event.shaped(
+        Item.of("minecraft:bookshelf",1),
+        [
+            "PSP",
+            "BBB",
+            "PSP"
+        ],
+        {
+            P: "#minecraft:planks",
+            B: "minecraft:book",
+            S: "#minecraft:wooden_slabs"
+        }
+    )
 
     event.smelting("kubejs:iron_chunk", "minecraft:raw_iron");
     event.blasting("kubejs:iron_chunk", "minecraft:raw_iron");
