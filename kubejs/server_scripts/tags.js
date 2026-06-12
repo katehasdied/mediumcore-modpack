@@ -14,4 +14,9 @@ ServerEvents.tags("item", event => {
     event.add("c:chains", "minecraft:chain");
 
     event.add("minecraft:pickaxes", "notreepunching:flint_pickaxe");
+
+    event.add("toolbar_sounds:tools", "kubejs:hammers");
+    event.add("toolbar_sounds:tools", "notreepunching:saws");
+    event.add("toolbar_sounds:tools", "notreepunching:knives");
+    event.add("toolbar_sounds:swords", "notreepunching:knives");
 })

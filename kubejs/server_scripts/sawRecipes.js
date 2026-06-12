@@ -274,6 +274,30 @@ ServerEvents.recipes(event => {
             B: "minecraft:paper",
         }
     )
+
+    shapedSawRecipe(
+        Item.of("minecraft:cut_copper",4),
+        [
+            "CC ",
+            "CC ",
+            "  X" 
+        ],
+        {
+            C: "minecraft:copper_block"
+        }
+    )
+
+    shapedSawRecipe(
+        Item.of("minecraft:waxed_cut_copper",4),
+        [
+            "CC ",
+            "CC ",
+            "  X" 
+        ],
+        {
+            C: "minecraft:waxed_copper_block"
+        }
+    )
     
     colors.forEach(color => {
         shapedSawRecipe(
