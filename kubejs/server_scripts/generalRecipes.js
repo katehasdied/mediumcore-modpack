@@ -222,6 +222,14 @@ ServerEvents.recipes(event => {
         }
     ).damageIngredient("#kubejs:hammers",5)
 
+    event.shapeless(
+        Item.of("minecraft:string",1),
+        [
+            "2x kubejs:sinew",
+            "1x #notreepunching:knives"
+        ]
+    ).damageIngredient("#notreepunching:knives");
+
     event.smelting("kubejs:iron_chunk", "minecraft:raw_iron");
     event.blasting("kubejs:iron_chunk", "minecraft:raw_iron");
 
