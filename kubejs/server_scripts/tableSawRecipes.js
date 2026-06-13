@@ -27,4 +27,6 @@ ServerEvents.recipes(event => {
     ].forEach((recipeId) => {event.remove({
         id: recipeId
     })})
+
+    event.stonecutting("minecraft:diamond", "kubejs:pure_diamond");
 })

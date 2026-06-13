@@ -1,0 +1,12 @@
+{
+	"sources": [
+		{
+			"type": "single",
+			"resource": "basicshields:entity/copper_shield_base"
+		},
+		{
+			"type": "single",
+			"resource": "basicshields:entity/copper_shield_base_nopattern"
+		}
+	]
+}
