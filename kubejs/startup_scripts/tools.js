@@ -19,35 +19,35 @@ StartupEvents.registry("item", event => {
     .attackDamageBonus(-3);
 
     // hammers should be given speed 0 because they shouldn't be able to break blocks
-    event.create("copper_hammer", "pickaxe")
+    event.create("copper_hammer", "axe")
     .displayName("Copper Hammer")
     .tier("copper")
     .tag("kubejs:hammers")
     .speedBaseline(-2.9)
-    .attackDamageBonus(3.5)
+    .attackDamageBonus(-1.5)
     .speed(0);
 
-    event.create("iron_hammer", "pickaxe")
+    event.create("iron_hammer", "axe")
     .displayName("Iron Hammer")
     .tier("iron")
     .tag("kubejs:hammers")
     .speedBaseline(-2.9)
-    .attackDamageBonus(4.5)
+    .attackDamageBonus(-0.5)
     .speed(0);
 
-    event.create("diamond_hammer", "pickaxe")
+    event.create("diamond_hammer", "axe")
     .displayName("Diamond Hammer")
     .tier("diamond")
     .tag("kubejs:hammers")
     .speedBaseline(-2.9)
-    .attackDamageBonus(5.5)
+    .attackDamageBonus(0.5)
     .speed(0);
 
-    event.create("netherite_hammer", "pickaxe")
+    event.create("netherite_hammer", "axe")
     .displayName("Netherite Hammer")
     .tier("diamond")
     .tag("kubejs:hammers")
     .speedBaseline(-2.9)
-    .attackDamageBonus(6.5)
+    .attackDamageBonus(1.5)
     .speed(0);
 })
