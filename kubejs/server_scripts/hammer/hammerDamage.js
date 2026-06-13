@@ -10,10 +10,8 @@ EntityEvents.hurt(event => {
     }
 
     if (heldItem.hasTag("kubejs:hammers")) {
-        event.server.tell(`${event.getDamage()}`);
-        if (player.fallDistance > 4 && !player.cooldowns.isOnCooldown(heldItem.id)) {
-            let totalDamage = event.getDamage() + player.fallDistance*0.5;
-            event.server.tell(`${totalDamage}`);
+        if (player.fallDistance > 1.5 && !player.cooldowns.isOnCooldown(heldItem.id)) {
+            let totalDamage = event.getDamage()*(1.2+Math.sqrt(player.fallDistance/6));
 
             player.addItemCooldown(heldItem.id, 50);
             target.attack(target.damageSources().playerAttack(player), totalDamage);
