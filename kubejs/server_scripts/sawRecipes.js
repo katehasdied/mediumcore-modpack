@@ -332,6 +332,18 @@ ServerEvents.recipes(event => {
             S: "minecraft:bamboo_mosaic"
         }
     )
+
+    shapedSawRecipe(
+        Item.of("minecraft:composter"),
+        [
+            "S S",
+            "SXS",
+            "SSS"
+        ],
+        {
+            S: "#minecraft:wooden_slabs"
+        }
+    )
     
     colors.forEach(color => {
         shapedSawRecipe(

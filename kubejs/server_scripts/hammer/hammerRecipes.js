@@ -85,7 +85,7 @@ ServerEvents.recipes(event => {
         Item.of("minecraft:bucket"),
         [
             "IXI",
-            " I"
+            " I "
         ],
         {
             I: "minecraft:iron_ingot"
@@ -356,6 +356,34 @@ ServerEvents.recipes(event => {
         ],
         {
             C: "minecraft:waxed_cut_copper"
+        }
+    )
+
+    shapedHammerRecipe(
+        Item.of("minecraft:enchanting_table"),
+        [
+            "XB ",
+            "DOD",
+            "OOO"
+        ],
+        {
+            B: "minecraft:book",
+            D: "minecraft:diamond",
+            O: "minecraft:obsidian"
+        }
+    )
+
+    shapedHammerRecipe(
+        Item.of("minecraft:hopper"),
+        [
+            "IXI",
+            "ICI",
+            "RIR"
+        ],
+        {
+            I: "minecraft:iron_ingot",
+            C: "minecraft:chest",
+            R: "minecraft:redstone"
         }
     )
 })

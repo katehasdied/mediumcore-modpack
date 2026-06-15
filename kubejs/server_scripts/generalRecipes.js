@@ -44,10 +44,7 @@ ServerEvents.recipes(event => {
             "3x #notreepunching:fire_starter_kindling",
             "#c:starts_fires"
         ]
-    ).damageIngredient("#c:starts_fires");
-
-    
-
+    ).damageIngredient("#c:starts_fires", 4);
 
     event.shapeless(
         Item.of("minecraft:tipped_arrow",8,"{Potion:\"minecraft:poison\"}"),
