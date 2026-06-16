@@ -12,6 +12,10 @@
 !links/
 !links/**
 
+# forge mods config
+!defaultconfigs/
+!defaultconfigs/**
+
 # Whitelisted files
 !index.toml
 !pack.toml

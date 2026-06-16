@@ -1,2 +1,6 @@
 roughlyenoughitems/
 fabric/
+jade/
+forge-client.toml
+fml.toml
+indium-renderer.properties

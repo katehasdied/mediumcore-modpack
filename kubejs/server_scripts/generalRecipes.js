@@ -10,6 +10,7 @@ ServerEvents.recipes(event => {
         "minecraft:bookshelf",
         "minecraft:leather",
         "minecraft:stonecutter",
+        "minecraft:campfire",
 
         "minecraft:golden_helmet",
         "minecraft:golden_chestplate",
@@ -40,11 +41,10 @@ ServerEvents.recipes(event => {
     event.shapeless(
         Item.of("minecraft:campfire", 1),
         [
-            "1x #notreepunching:fire_starter_logs",
-            "3x #notreepunching:fire_starter_kindling",
-            "#c:starts_fires"
+            "2x #notreepunching:fire_starter_logs",
+            "2x #notreepunching:fire_starter_kindling",
         ]
-    ).damageIngredient("#c:starts_fires", 4);
+    );
 
     event.shapeless(
         Item.of("minecraft:tipped_arrow",8,"{Potion:\"minecraft:poison\"}"),
@@ -237,7 +237,6 @@ ServerEvents.recipes(event => {
     event.blasting("kubejs:gold_chunk", "minecraft:raw_gold");
     
     event.campfireCooking('kubejs:copper_chunk', 'minecraft:raw_copper', 1, 1200);
-    event.campfireCooking('minecraft:charcoal', '#minecraft:logs', 1, 2400);
     event.campfireCooking('minecraft:rabbit_hide', 'minecraft:rotten_flesh', 1, 1200);
     event.campfireCooking('minecraft:torch', 'kubejs:unlit_torch', 1, 5);
 })

@@ -1,0 +1,13 @@
+name = "Unlit Campfires"
+filename = "../mods/unlitcampfire-forge-1.20.1-1.9.2.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/yENm0xnb/versions/xYG7R9xD/unlitcampfire-forge-1.20.1-1.9.2.1.jar"
+hash-format = "sha512"
+hash = "34c532a5990a82d7c660fe64d6266db1115d4f130f8e9982939f73019da47711c61ad82d94fe7b738e6666ea021be517ca3dc344f85772d27e8adae15ab8867c"
+
+[update]
+[update.modrinth]
+mod-id = "yENm0xnb"
+version = "xYG7R9xD"

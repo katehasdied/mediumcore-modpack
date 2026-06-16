@@ -1,6 +1,6 @@
 name = "2D Projectiles ➵"
 filename = "../mods/twod_projectiles-fabric-1.1.1.jar"
-side = "client"
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/W2K5WNdH/versions/zaPXpkzj/twod_projectiles-fabric-1.1.1.jar"
