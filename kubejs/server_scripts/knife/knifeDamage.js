@@ -27,20 +27,37 @@ EntityEvents.hurt(event => {
         }
     }
 
+    
     if (heldItemIsKnife) {
-        if (pData.knifeComboEntity == target.uuid && event.getDamage() >= 2.5) {
+        const isComboValid = pData.knifeComboEntity == target.uuid;
+        const isEffectiveHit = event.getDamage() >= 2.5;
+        const isTimely = ((Date.now() - pData.knifeLastHitTime) < 3*1000);
+        
+        // repeating the marked for death code because putting it in a function broke something
+        if (isComboValid && isEffectiveHit) {
             pData.putDouble("knifeCombo", pData.knifeCombo + 1)
+            pData.putLong("knifeLastHitTime", Date.now());
             if (pData.knifeCombo >= 3) {
                 let effectLevel = Math.max(0,Math.floor(Math.sqrt(0.75*(pData.knifeCombo - 3)) - 0.25));
                 target.potionEffects.add("kubejs:marked_for_death", 300/(1 + effectLevel/2), effectLevel, true, true);
             }
-        } else {
+        } else if (isEffectiveHit && isTimely)  {
+            pData.putDouble("knifeCombo", pData.knifeCombo + 0.34)
+            pData.putLong("knifeLastHitTime", Date.now());
             pData.putString("knifeComboEntity", target.uuid)
-            pData.putDouble("knifeCombo", pData.knifeCombo + 0.25)
-        } 
+            if (pData.knifeCombo >= 3) {
+                let effectLevel = Math.max(0,Math.floor(Math.sqrt(0.75*(pData.knifeCombo - 3)) - 0.25));
+                target.potionEffects.add("kubejs:marked_for_death", 300/(1 + effectLevel/2), effectLevel, true, true);
+            }
+        } else if (isEffectiveHit) {
+            pData.putDouble("knifeCombo", 1);
+            pData.putLong("knifeLastHitTime", Date.now());
+            pData.putString("knifeComboEntity", target.uuid)
+        }
     } else {
         pData.putDouble("knifeCombo", 0);
     }
+    
     // debug
-    // event.server.tell(`${pData.knifeComboEntity} hit with knife ${pData.knifeCombo} times`);
+    event.server.tell(`${pData.knifeComboEntity} hit with a combo score of ${pData.knifeCombo}`);
 })

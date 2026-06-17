@@ -26,7 +26,7 @@ StartupEvents.registry("mob_effect", event => {
         .modifyAttribute(
             "minecraft:generic.attack_damage",
             "f89a7eaf-3092-46cd-8ee3-d43e4b4ac96b",
-            0.25,
+            0.225,
             "multiply_total"
         )
         .modifyAttribute(

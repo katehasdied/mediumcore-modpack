@@ -1,5 +1,5 @@
-// for some reason, kite obliterates loot table changes
 LootJS.modifiers((event) => {
+    // for some reason, kite obliterates loot table changes
     event.addBlockLootModifier("minecraft:grass")
     .randomChance(0.2)
     .addLoot("notreepunching:plant_fiber");
