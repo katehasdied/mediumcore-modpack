@@ -1,6 +1,6 @@
 name = "Fancy Health Bar"
 filename = "../mods/FancyHealthBar-1.20.1-1.2.2.jar"
-side = "client"
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/d5wz0u1I/versions/Qd08zqBq/FancyHealthBar-1.20.1-1.2.2.jar"

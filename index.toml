@@ -1713,6 +1713,11 @@ hash = "15361343b60c7203d568eb689fa976bed048abc3e1ba70f3882b12062fcfe989"
 metafile = true
 
 [[files]]
+file = "links/lootjs.pw.toml"
+hash = "61d044ff79ee9910cb74012892108918c337057147b431733715d2b7444368b5"
+metafile = true
+
+[[files]]
 file = "links/midnightlib.pw.toml"
 hash = "9ace691d85d72b6281bb7ee5b22a6fc4eea14ea7b4a76e32b47068045cf61392"
 metafile = true

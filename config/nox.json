@@ -96,7 +96,7 @@
   "silverfishImmuneToFallDamage": true,
   "silverfishCanDrown": false,
   "silverfishCanSuffocate": false,
-  "skeletonSpeedMultiplier": 1.25,
+  "skeletonSpeedMultiplier": 1,
   "skeletonsCanSwim": true,
   "strayAttacksApplyStrongerSlowness": true,
   "witherSkeletonArchersExist": true,
