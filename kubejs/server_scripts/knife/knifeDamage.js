@@ -4,6 +4,7 @@ EntityEvents.hurt(event => {
     let target = event.entity;
     let heldItemIsKnife = heldItem.hasTag("notreepunching:knives");
     let pData = player.persistentData;
+    let positionString = `${target.x} ${target.y} ${target.z}`
 
     if (!event.source.actual.isPlayer() || !event.entity.alive) {
         return;
@@ -24,6 +25,8 @@ EntityEvents.hurt(event => {
         } else if (event.getDamage() >= 3) {
             target.potionEffects.add("kubejs:bleeding", 100 + 40*effectLevel, effectLevel, true, true);
             target.removeEffect("kubejs:marked_for_death");
+            event.server.runCommandSilent(`playsound minecraft:entity.player.attack.crit player @a ${positionString} 2 ${1.5 + Math.random()*0.5}`);
+            event.server.runCommandSilent(`particle block minecraft:nether_wart_block ${positionString} 0.5 0.66 0.5 1 100 normal`);
         }
     }
 
@@ -41,6 +44,7 @@ EntityEvents.hurt(event => {
                 let effectLevel = Math.max(0,Math.floor(Math.sqrt(0.75*(pData.knifeCombo - 3)) - 0.25));
                 target.potionEffects.add("kubejs:marked_for_death", 300/(1 + effectLevel/2), effectLevel, true, true);
             }
+            event.server.runCommandSilent(`playsound minecraft:block.copper_grate.place player @a ${target.x} ${target.y} ${target.z} 10 ${0.5 + Math.random()*0.33}`);
         } else if (isEffectiveHit && isTimely)  {
             pData.putDouble("knifeCombo", pData.knifeCombo + 0.34)
             pData.putLong("knifeLastHitTime", Date.now());
@@ -49,6 +53,7 @@ EntityEvents.hurt(event => {
                 let effectLevel = Math.max(0,Math.floor(Math.sqrt(0.75*(pData.knifeCombo - 3)) - 0.25));
                 target.potionEffects.add("kubejs:marked_for_death", 300/(1 + effectLevel/2), effectLevel, true, true);
             }
+            event.server.runCommandSilent(`playsound minecraft:block.copper_grate.place player @a ${target.x} ${target.y} ${target.z} 5 ${0.5 + Math.random()*0.33}`);
         } else if (isEffectiveHit) {
             pData.putDouble("knifeCombo", 1);
             pData.putLong("knifeLastHitTime", Date.now());
