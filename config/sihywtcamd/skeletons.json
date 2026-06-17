@@ -2,7 +2,7 @@
   "general": {
     "baby": true,
     "babyQuickAttackGoal": true,
-    "fleeGoal": true,
+    "fleeGoal": false,
     "swimGoal": true
   },
   "skeleton": {

@@ -2,4 +2,4 @@
 #Minecraft by default has a hard-coded 5 tick delay between right-clicking with the shield and being able to block.
 #Setting RaiseTime to 0 makes shields capable of blocking instantly. Setting it to 5 would be equivalent to vanilla.
 Enabled = true
-RaiseTime = 1
+RaiseTime = 0

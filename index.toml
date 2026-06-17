@@ -1709,7 +1709,7 @@ metafile = true
 
 [[files]]
 file = "links/lithostitched.pw.toml"
-hash = "15361343b60c7203d568eb689fa976bed048abc3e1ba70f3882b12062fcfe989"
+hash = "55167e582fd4841cd6c581beb53d341e94285c216e04b1d7bff0068e875be2a6"
 metafile = true
 
 [[files]]
@@ -1814,7 +1814,7 @@ metafile = true
 
 [[files]]
 file = "links/tectonic.pw.toml"
-hash = "14f9919edd682ca357416abe312ece880176d37a3cd2913c99b4c20649c77a9c"
+hash = "ce8868bbecfc78d470fe88663e4128751a4282968adaa5e5676544ecabab6355"
 metafile = true
 
 [[files]]

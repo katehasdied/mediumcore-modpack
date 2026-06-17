@@ -1,6 +1,6 @@
 {
   "enderman": {
-    "blindnessAttack": true
+    "blindnessAttack": false
   },
   "shulker": {
     "cancelLevitation": true

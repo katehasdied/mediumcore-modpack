@@ -1,6 +1,6 @@
 {
   "general": {
-    "attackHeal": true,
+    "attackHeal": false,
     "ignoreUndeadAttacks": true
   },
   "phantom": {

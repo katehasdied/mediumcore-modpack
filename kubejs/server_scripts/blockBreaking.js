@@ -11,23 +11,6 @@ function breakAndReplace(event, block) {
 		event.cancel();
 }
 
-function replaceAndDropSpecificItemEvent(block, replacement, drop, count) {
-	BlockEvents.broken(block, event => {
-		if (event.player.isCreative()) {
-		 return;
-		}
-
-		let face = event.player.pick(5, 1, false).direction;
-
-		let item = event.player.mainHandItem;
-		if ( !item.enchantments.containsKey("minecraft:silk_touch") ) {
-				event.block.popItemFromFace(Item.of(drop,count), face);
-		}
-		
-		breakAndReplace(event, replacement);
-	})
-}
-
 function replaceAndDropEvent(block, replacement) {
 	BlockEvents.broken(block, event => {
 		if (event.player.isCreative()) {
@@ -48,12 +31,7 @@ function replaceAndDropEvent(block, replacement) {
 	})
 }
 
-function replaceEvent(block, replacement) {BlockEvents.broken(block, event => {
-		if (event.player.isCreative()) {
-		 return;
-		}
-		breakAndReplace(event, replacement);
-	})
+function replaceEvent(block, replacement) {
 	BlockEvents.broken(block, event => {
 		if (event.player.isCreative()) {
 		 return;
@@ -68,20 +46,17 @@ replaceAndDropEvent("minecraft:redstone_ore","minecraft:stone");
 replaceAndDropEvent("minecraft:coal_ore","minecraft:stone");
 replaceAndDropEvent("minecraft:lapis_ore","minecraft:stone");
 replaceAndDropEvent("minecraft:gold_ore","minecraft:stone");
+replaceAndDropEvent("minecraft:diamond_ore","minecraft:stone");
 replaceAndDropEvent("minecraft:deepslate_iron_ore","minecraft:deepslate");
 replaceAndDropEvent("minecraft:deepslate_copper_ore","minecraft:deepslate");
 replaceAndDropEvent("minecraft:deepslate_redstone_ore","minecraft:deepslate");
 replaceAndDropEvent("minecraft:deepslate_coal_ore","minecraft:deepslate");
 replaceAndDropEvent("minecraft:deepslate_lapis_ore","minecraft:deepslate");
 replaceAndDropEvent("minecraft:deepslate_gold_ore","minecraft:deepslate");
+replaceAndDropEvent("minecraft:deepslate_diamond_ore","minecraft:deepslate");
 
 replaceAndDropEvent("minecraft:nether_gold_ore","minecraft:netherrack");
 replaceAndDropEvent("minecraft:nether_quartz_ore","minecraft:netherrack");
-
-
-// add impure diamonds later
-replaceAndDropSpecificItemEvent("minecraft:diamond_ore","minecraft:stone","kubejs:raw_diamond",1);
-replaceAndDropSpecificItemEvent("minecraft:deepslate_diamond_ore","minecraft:deepslate","kubejs:raw_diamond",1);
 
 replaceEvent("minecraft:stone", "minecraft:cobblestone");
 replaceEvent("minecraft:deepslate", "minecraft:cobbled_deepslate");

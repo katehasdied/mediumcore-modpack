@@ -20,7 +20,7 @@ EntityEvents.hurt(event => {
     if (target.hasEffect("kubejs:marked_for_death")) {
         let effectLevel = target.getEffect("kubejs:marked_for_death").getAmplifier();
         if (heldItemIsKnife) {
-            player.potionEffects.add("kubejs:hyperviolent", 120 + 60*effectLevel, effectLevel, true, true);
+            player.potionEffects.add("kubejs:hyperviolent", 200 + 40*effectLevel, effectLevel, true, true);
         } else if (event.getDamage() >= 3) {
             target.potionEffects.add("kubejs:bleeding", 100 + 40*effectLevel, effectLevel, true, true);
             target.removeEffect("kubejs:marked_for_death");
@@ -32,11 +32,11 @@ EntityEvents.hurt(event => {
             pData.putDouble("knifeCombo", pData.knifeCombo + 1)
             if (pData.knifeCombo >= 3) {
                 let effectLevel = Math.max(0,Math.floor(Math.sqrt(0.75*(pData.knifeCombo - 3)) - 0.25));
-                target.potionEffects.add("kubejs:marked_for_death", 600/(1 + effectLevel/2), effectLevel, true, true);
+                target.potionEffects.add("kubejs:marked_for_death", 300/(1 + effectLevel/2), effectLevel, true, true);
             }
         } else {
             pData.putString("knifeComboEntity", target.uuid)
-            pData.putDouble("knifeCombo", 1)
+            pData.putDouble("knifeCombo", pData.knifeCombo + 0.25)
         } 
     } else {
         pData.putDouble("knifeCombo", 0);
