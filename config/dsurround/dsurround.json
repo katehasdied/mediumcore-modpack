@@ -29,14 +29,14 @@
   },
   "blockEffects": {
     "blockEffectRange": 32,
-    "steamColumnEnabled": true,
-    "flameJetEnabled": true,
+    "steamColumnEnabled": false,
+    "flameJetEnabled": false,
     "bubbleColumnEnabled": true,
     "firefliesEnabled": true,
-    "waterfallsEnabled": true,
-    "enableWaterfallSounds": true,
-    "enableWaterfallParticles": true,
-    "waterRippleStyle": "PIXELATED_CIRCLE"
+    "waterfallsEnabled": false,
+    "enableWaterfallSounds": false,
+    "enableWaterfallParticles": false,
+    "waterRippleStyle": "NONE"
   },
   "entityEffects": {
     "entityEffectRange": 24,

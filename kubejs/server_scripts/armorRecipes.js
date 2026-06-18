@@ -15,6 +15,7 @@ ServerEvents.recipes(event => {
         for (let i = 0; i <= recipeList.length - 1; i++) {
             let augmentedKey = key;
             augmentedKey.X = augmentItem[i];
+            augmentedKey.Y = "#kubejs:hammers";
 
             event.remove({output: itemList[i]})
             event.shaped(
@@ -23,7 +24,22 @@ ServerEvents.recipes(event => {
                 augmentedKey
             )
         }
-    }     
+    }
+    
+    function augmentReplaceTierHammer(recipeList, itemList, key, augmentItem) {
+        for (let i = 0; i <= recipeList.length - 1; i++) {
+            let augmentedKey = key;
+            augmentedKey.X = augmentItem[i];
+            augmentedKey.Y = "#kubejs:hammers";
+
+            event.remove({output: itemList[i]})
+            event.shaped(
+                Item.of(itemList[i],1),
+                recipeList[i],
+                augmentedKey
+            ).damageIngredient("#kubejs:hammers");
+        }
+    } 
 
     // add string to leather recipe
     simpleReplaceTier(
@@ -62,25 +78,27 @@ ServerEvents.recipes(event => {
     )
     
     // add leather to iron armor recipe
-    augmentReplaceTier(
+    augmentReplaceTierHammer(
         [
             [
-                "III",
-                "IXI"
+                " Y ",
+                "PIP",
+                " X "
             ],
             [
-                "IXI",
-                "III",
-                "III"
+                "IYI",
+                "PXP",
+                " P "
             ],
             [
-                "III",
+                " I ",
                 "IXI",
-                "I I"
+                "PYP"
             ],
             [
-                "IXI",
-                "I I"
+                " Y ",
+                "PXP",
+                " I "
             ]
         ],
         [
@@ -90,7 +108,8 @@ ServerEvents.recipes(event => {
             "minecraft:iron_boots"
         ],
         {
-            I: "minecraft:iron_ingot"
+            I: "minecraft:iron_ingot",
+            P: "kubejs:iron_plate"
         },
         [
             "minecraft:leather_helmet",
@@ -104,22 +123,24 @@ ServerEvents.recipes(event => {
     augmentReplaceTier(
         [
             [
-                "CCC",
-                "CXC"
+                " Y ",
+                "PCP",
+                " X "
             ],
             [
-                "CXC",
-                "CCC",
-                "CCC"
+                "CYC",
+                "PXP",
+                " P "
             ],
             [
-                "CCC",
+                " C ",
                 "CXC",
-                "C C"
+                "PYP"
             ],
             [
-                "CXC",
-                "C C"
+                " Y ",
+                "PXP",
+                " C "
             ]
         ],
         [
@@ -129,7 +150,8 @@ ServerEvents.recipes(event => {
             "minecraft:copper_boots"
         ],
         {
-            C: "minecraft:copper_ingot"
+            C: "minecraft:copper_ingot",
+            P: "kubejs:copper_plate"
         },
         [
             "minecraft:leather_helmet",

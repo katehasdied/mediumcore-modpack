@@ -16,4 +16,13 @@ StartupEvents.registry("item", event => {
 
     event.create("cleansed_diamond")
     .displayName("Cleansed Diamond");
+
+    event.create("iron_plate")
+    .displayName("Iron Plate");
+
+    event.create("copper_plate")
+    .displayName("Copper Plate");
+
+    event.create("gold_plate")
+    .displayName("Gold Plate");
 })

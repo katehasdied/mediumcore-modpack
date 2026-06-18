@@ -2,7 +2,7 @@ ServerEvents.recipes(event => {
     let shapedHammerRecipe = global.shapedToolRecipe(event, "#kubejs:hammers");
 
     // i have to define the list before using it because kubejs
-    let metals = ["iron", "copper"]
+    let metals = ["iron", "copper"];
     metals.forEach((metal) => {
             shapedHammerRecipe(
                 Item.of(`minecraft:${metal}_bars`, 16),
@@ -18,14 +18,30 @@ ServerEvents.recipes(event => {
         }
     )
 
+    let plateMetals = ["iron", "copper", "gold"];
+    plateMetals.forEach((metal) => {
+            shapedHammerRecipe(
+                Item.of(`kubejs:${metal}_plate`, 1),
+                [
+                    " X ",
+                    " B ",
+                    " B "
+                ],
+                {
+                    B: `minecraft:${metal}_ingot`
+                }
+            )
+        }
+    )
+
     let shieldRecipes = [
         {
             result: "basicshields:copper_shield",
-            material: "minecraft:copper_ingot"
+            material: "kubejs:copper_plate"
         },
         {
             result: "minecraft:shield",
-            material: "minecraft:iron_ingot"
+            material: "kubejs:iron_plate"
         },
         {
             result: "basicshields:diamond_shield",
@@ -376,14 +392,15 @@ ServerEvents.recipes(event => {
     shapedHammerRecipe(
         Item.of("minecraft:hopper"),
         [
-            "IXI",
+            "PXP",
             "ICI",
             "RIR"
         ],
         {
             I: "minecraft:iron_ingot",
             C: "minecraft:chest",
-            R: "minecraft:redstone"
+            R: "minecraft:redstone",
+            P: "kubejs:iron_plate"
         }
     )
 })

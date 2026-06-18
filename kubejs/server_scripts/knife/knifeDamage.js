@@ -64,5 +64,5 @@ EntityEvents.hurt(event => {
     }
     
     // debug
-    event.server.tell(`${pData.knifeComboEntity} hit with a combo score of ${pData.knifeCombo}`);
+    // event.server.tell(`${pData.knifeComboEntity} hit with a combo score of ${pData.knifeCombo}`);
 })
