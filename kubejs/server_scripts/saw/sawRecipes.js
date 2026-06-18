@@ -212,26 +212,26 @@ ServerEvents.recipes(event => {
     shapedSawRecipe(
         "minecraft:chest",
         [
-            "PPP",
-            "IXI",
+            "PIP",
+            "PXP",
             "PPP"
         ],
         {
             P: "#minecraft:planks",
-            I: "minecraft:iron_ingot"
+            I: "kubejs:iron_plate"
         }
     )
 
     shapedSawRecipe(
         "minecraft:barrel",
         [
-            "PSP",
-            "IXI",
+            "PIP",
+            "SXS",
             "PSP"
         ],
         {
             P: "#minecraft:planks",
-            I: "minecraft:iron_ingot",
+            I: "kubejs:iron_plate",
             S: "#minecraft:wooden_slabs"
         }
     )

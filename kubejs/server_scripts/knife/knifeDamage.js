@@ -1,3 +1,13 @@
+function applyKnifeDebuff(event, combo) {
+    if (combo >= 3) {
+        let effectLevel = Math.min(4,Math.max(0,Math.floor(Math.sqrt(0.75*(combo - 3)) - 0.25)));
+        
+        event.entity.potionEffects.add("kubejs:marked_for_death", 300/(1 + effectLevel/2), effectLevel, true, true);
+    }
+    event.server.runCommandSilent(`playsound minecraft:block.copper_grate.place player @a ${event.entity.x} ${event.entity.y} ${event.entity.z} 30 ${0.5 + Math.random()*0.33}`);
+    event.server.runCommandSilent(`particle block minecraft:nether_wart_block ${event.entity.x} ${event.entity.y + 0.25} ${event.entity.z} 0.25 0.66 0.25 1 10 normal`);
+}
+
 EntityEvents.hurt(event => {
     let player = event.source.actual;
     let heldItem = player.getMainHandItem();
@@ -29,34 +39,25 @@ EntityEvents.hurt(event => {
             event.server.runCommandSilent(`particle block minecraft:nether_wart_block ${positionString} 0.5 0.66 0.5 1 100 normal`);
         }
     }
-
     
     if (heldItemIsKnife) {
         const isComboValid = pData.knifeComboEntity == target.uuid;
         const isEffectiveHit = event.getDamage() >= 2.5;
-        const isTimely = ((Date.now() - pData.knifeLastHitTime) < 3*1000);
+        const isTimely = ((player.age - pData.knifeLastHitTime) < 3*20);
         
         // repeating the marked for death code because putting it in a function broke something
         if (isComboValid && isEffectiveHit) {
             pData.putDouble("knifeCombo", pData.knifeCombo + 1)
-            pData.putLong("knifeLastHitTime", Date.now());
-            if (pData.knifeCombo >= 3) {
-                let effectLevel = Math.max(0,Math.floor(Math.sqrt(0.75*(pData.knifeCombo - 3)) - 0.25));
-                target.potionEffects.add("kubejs:marked_for_death", 300/(1 + effectLevel/2), effectLevel, true, true);
-            }
-            event.server.runCommandSilent(`playsound minecraft:block.copper_grate.place player @a ${target.x} ${target.y} ${target.z} 10 ${0.5 + Math.random()*0.33}`);
+            pData.putLong("knifeLastHitTime", player.age);
+            applyKnifeDebuff(event, pData.knifeCombo);
         } else if (isEffectiveHit && isTimely)  {
             pData.putDouble("knifeCombo", pData.knifeCombo + 0.34)
-            pData.putLong("knifeLastHitTime", Date.now());
+            pData.putLong("knifeLastHitTime", player.age);
             pData.putString("knifeComboEntity", target.uuid)
-            if (pData.knifeCombo >= 3) {
-                let effectLevel = Math.max(0,Math.floor(Math.sqrt(0.75*(pData.knifeCombo - 3)) - 0.25));
-                target.potionEffects.add("kubejs:marked_for_death", 300/(1 + effectLevel/2), effectLevel, true, true);
-            }
-            event.server.runCommandSilent(`playsound minecraft:block.copper_grate.place player @a ${target.x} ${target.y} ${target.z} 5 ${0.5 + Math.random()*0.33}`);
+            applyKnifeDebuff(event, pData.knifeCombo);
         } else if (isEffectiveHit) {
             pData.putDouble("knifeCombo", 1);
-            pData.putLong("knifeLastHitTime", Date.now());
+            pData.putLong("knifeLastHitTime", player.age);
             pData.putString("knifeComboEntity", target.uuid)
         }
     } else {

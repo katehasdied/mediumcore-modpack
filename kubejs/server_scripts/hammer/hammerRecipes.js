@@ -77,12 +77,12 @@ ServerEvents.recipes(event => {
     shapedHammerRecipe(
         Item.of("minecraft:iron_door", 3),
         [
-            "II ",
-            "IIX",
-            "II "
+            "I ",
+            "IX",
+            "I "
         ],
         {
-            I: "minecraft:iron_ingot"
+            I: "kubejs:iron_plate"
         }
     )
 
@@ -98,13 +98,13 @@ ServerEvents.recipes(event => {
     )
 
     shapedHammerRecipe(
-        Item.of("minecraft:bucket"),
+        Item.of("minecraft:bucket",2),
         [
             "IXI",
             " I "
         ],
         {
-            I: "minecraft:iron_ingot"
+            I: "kubejs:iron_plate"
         }
     )
 
@@ -227,24 +227,20 @@ ServerEvents.recipes(event => {
     shapedHammerRecipe(
         Item.of("minecraft:iron_trapdoor"),
         [
-            "II ",
-            "II ",
-            "  X"
+            "IIX"
         ],
         {
-            I: "minecraft:iron_ingot"
+            I: "kubejs:iron_plate"
         }
     )
 
     shapedHammerRecipe(
         Item.of("minecraft:copper_trapdoor"),
         [
-            "CC ",
-            "CC ",
-            "  X"
+            "CCX"
         ],
         {
-            C: "minecraft:copper_ingot"
+            C: "kubejs:copper_plate"
         }
     )
 
@@ -275,12 +271,12 @@ ServerEvents.recipes(event => {
     shapedHammerRecipe(
         Item.of("minecraft:copper_door",3),
         [
-            "CC ",
-            "CCX",
-            "CC "
+            "C ",
+            "CX",
+            "C "
         ],
         {
-            C: "minecraft:copper_ingot"
+            C: "kubejs:copper_plate"
         }
     )
 
@@ -401,6 +397,19 @@ ServerEvents.recipes(event => {
             C: "minecraft:chest",
             R: "minecraft:redstone",
             P: "kubejs:iron_plate"
+        }
+    )
+
+    shapedHammerRecipe(
+        Item.of("minecraft:golden_apple"),
+        [
+            " GX",
+            "GAG",
+            " G "
+        ],
+        {
+            G: "kubejs:gold_plate",
+            A: "minecraft:apple"
         }
     )
 })

@@ -18,11 +18,14 @@ StartupEvents.registry("item", event => {
     .displayName("Cleansed Diamond");
 
     event.create("iron_plate")
-    .displayName("Iron Plate");
+    .displayName("Iron Plate")
+    .tag("c:plates");
 
     event.create("copper_plate")
-    .displayName("Copper Plate");
+    .displayName("Copper Plate")
+    .tag("c:plates");
 
     event.create("gold_plate")
-    .displayName("Gold Plate");
+    .displayName("Gold Plate")
+    .tag("c:plates");
 })

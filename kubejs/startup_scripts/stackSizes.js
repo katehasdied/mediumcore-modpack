@@ -35,4 +35,16 @@ ItemEvents.modification(event => {
             item.maxStackSize = 1;
         })
     })
+
+    let stackables = [
+        "minecraft:potion",
+        "minecraft:splash_potion",
+        "minecraft:lingering_potion"
+    ];
+
+    stackables.forEach((id) => {
+        event.modify(id, item => {
+            item.maxStackSize = 16;
+        })
+    })
 })

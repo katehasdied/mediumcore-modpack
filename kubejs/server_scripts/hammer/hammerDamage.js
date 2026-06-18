@@ -26,7 +26,7 @@ EntityEvents.hurt(event => {
             event.server.runCommandSilent(`playsound minecraft:entity.zombie_villager.cure player @a ${positionString} 0.15 ${1.5+Math.random()*0.5}`);
 
             let block = target.level.getBlock(target.position().add(0, -1, 0));
-            event.server.runCommandSilent(`particle block ${block} ${positionString} 1.5 0.66 1.5 1 10 normal`);
+            event.server.runCommandSilent(`particle block ${block} ${positionString} 1.5 0.66 1.5 1 40 normal`);
 
             target.setMotionY(target.getMotionY() + 0.25);
 
